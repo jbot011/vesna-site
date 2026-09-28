@@ -3,185 +3,194 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>VESNA</title>
-  <meta name="description" content="VESNA — a gothic horror graphic novel." />
-  <style>
-    :root{
-      --bg:#050505;
-      --text:#ffffff;
-      --muted:#b3b3b3;
-      --button:#ffffff;
-      --buttonText:#000000;
-      --buttonBorder:#ffffff;
-      --max:1120px;
-      --content:960px;
-    }
-
-    *{box-sizing:border-box}
-
-    body{
-      margin:0;
-      background:var(--bg);
-      color:var(--text);
-      font-family:Arial, Helvetica, sans-serif;
-    }
-
-    .hero{
-      width:100%;
-      background:#000;
-    }
-
-    .hero img{
-      display:block;
-      width:100%;
-      height:auto;
-      max-width:1920px;
-      margin:0 auto;
-    }
-
-    .content{
-      width:min(calc(100% - 32px), var(--max));
-      margin:0 auto;
-      padding:28px 0 60px;
-      text-align:center;
-    }
-
-    .section{
-      margin:0 auto 34px;
-      width:min(100%, var(--content));
-    }
-
-    .video-wrap{
-      position:relative;
-      width:100%;
-      aspect-ratio:16/9;
-      background:#111;
-      overflow:hidden;
-      border:1px solid rgba(255,255,255,.08);
-    }
-
-    .video-wrap iframe{
-      position:absolute;
-      inset:0;
-      width:100%;
-      height:100%;
-      border:0;
-    }
-
-    .cover-wrap{
-      padding-top:8px;
-    }
-
-    .cover{
-      display:block;
-      width:min(100%, 420px);
-      height:auto;
-      margin:0 auto;
-      box-shadow:0 10px 30px rgba(0,0,0,.35);
-    }
-
-    .credits{
-      margin:20px auto 0;
-      font-size:14px;
-      color:var(--muted);
-      line-height:1.5;
-      letter-spacing:.03em;
-      text-transform:uppercase;
-    }
-
-    .buttons{
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:center;
-      gap:14px;
-      margin-top:6px;
-    }
-
-    .button{
-      display:inline-block;
-      padding:15px 24px;
-      min-width:190px;
-      border:1px solid var(--buttonBorder);
-      background:var(--button);
-      color:var(--buttonText);
-      text-decoration:none;
-      font-weight:700;
-      letter-spacing:.04em;
-      text-transform:uppercase;
-      transition:.15s ease;
-    }
-
-    .button:hover{
-      background:transparent;
-      color:var(--text);
-    }
-
-    .footer{
-      margin-top:18px;
-      color:#8f8f8f;
-      font-size:12px;
-      line-height:1.5;
-    }
-
-    @media (max-width:700px){
-      .content{
-        width:min(calc(100% - 20px), var(--max));
-        padding-top:18px;
-        padding-bottom:40px;
-      }
-
-      .section{margin-bottom:24px}
-
-      .buttons{
-        flex-direction:column;
-        align-items:stretch;
-      }
-
-      .button{width:100%}
-
-      .credits{font-size:12px}
-    }
-  </style>
+  <meta name="theme-color" content="#080706" />
+  <meta name="description" content="VESNA: Stumble & Fall — a gothic horror graphic novel by Jason Alacrity and Megan Hutchison." />
+  <title>VESNA: Stumble & Fall</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="site-header">
+    <a href="#top" class="brand" aria-label="VESNA home">VESNA</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+      <a href="#story">Story</a>
+      <a href="#characters">Characters</a>
+      <a href="#motion">Motion</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#creators">Creators</a>
+      <a href="#buy" class="nav-cta">Buy</a>
+    </nav>
+  </header>
 
-  <section class="hero">
-    <img src="vesna-banner.png" alt="VESNA — A Gothic Horror Graphic Novel" />
-  </section>
+  <main id="top">
+    <section class="hero section-frame">
+      <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/p01_img01.jpeg" aria-hidden="true">
+        <source src="assets/vesna-site-banner.mp4" type="video/mp4">
+      </video>
+      <div class="hero-occult" aria-hidden="true"></div>
+      <div class="hero-copy reveal">
+        <div class="eyebrow">A graphic novel by Jason Alacrity & Megan Hutchison</div>
+        <img src="assets/vesna-logo.png" class="hero-logo" alt="VESNA: Stumble & Fall" />
+        <p class="hero-tagline">Revenge has a price. Hers awakened something darker.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#trailer">Watch Trailer</a>
+          <a class="button ghost" href="#buy">Get the Book</a>
+        </div>
+      </div>
+      <div class="hero-art reveal">
+        <div class="cover-wrap">
+          <img src="assets/p01_img02.jpeg" alt="VESNA: Stumble & Fall cover art" />
+          <span class="cover-glow" aria-hidden="true"></span>
+        </div>
+      </div>
+      <div class="scroll-cue" aria-hidden="true"><span></span>Enter the world</div>
+    </section>
 
-  <main class="content">
-
-    <section class="section">
-      <div class="video-wrap">
-        <iframe
-          src="https://www.youtube.com/embed/NqpB8Xr3CaA?si=qn1cshvfUcYketas"
-          title="VESNA Trailer"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen>
-        </iframe>
+    <section id="story" class="story section-frame dark-section">
+      <div class="section-kicker">The Story</div>
+      <div class="story-grid">
+        <div class="story-copy reveal">
+          <h2>The night her family died, something else was born.</h2>
+          <p class="lede">After witnessing her family murdered by corrupt cops, Vesna discovers a deadly power growing inside her. She turns that curse toward revenge, hunting the men responsible while drawing the attention of demons and other dark forces.</p>
+          <p>Every step brings her closer to the truth, and closer to becoming something she may not be able to come back from.</p>
+          <div class="meta-row"><span>Gothic Horror</span><span>Action</span><span>74 Pages</span></div>
+        </div>
+        <div class="story-visual reveal" id="trailer">
+          <button class="video-card" type="button" data-video="https://www.youtube.com/embed/NqpB8Xr3CaA?autoplay=1&rel=0" aria-label="Play VESNA trailer">
+            <img src="assets/p02_img03.jpeg" alt="VESNA trailer still" />
+            <span class="play">▶</span>
+            <span class="video-label">Official Trailer</span>
+          </button>
+        </div>
       </div>
     </section>
 
-    <section class="section cover-wrap">
-      <img class="cover" src="vesna-cover.jpg" alt="VESNA comic cover" />
-      <div class="credits">
-        Written by Jason Alacrity<br />
-        Artwork by Megan Hutchison
+    <section id="characters" class="characters section-frame">
+      <div class="section-heading reveal">
+        <div class="section-kicker">The Damned & The Dangerous</div>
+        <h2>Meet the Characters</h2>
+      </div>
+      <div class="character-grid">
+        <article class="character-card reveal" data-character="vesna">
+          <div class="character-image"><img src="assets/char-vesna.jpg" alt="Vesna character art"></div>
+          <div class="character-body"><span class="character-type">The Cursed</span><h3>Vesna</h3><p>Scrappy, resourceful, and carrying a rage she can barely contain. Her hunt for revenge awakens a power that may consume her.</p></div>
+        </article>
+        <article class="character-card reveal">
+          <div class="character-image"><img src="assets/char-moth.jpg" alt="Moth and Robot Baby character art"></div>
+          <div class="character-body"><span class="character-type">The Survivors</span><h3>Moth & Robot Baby</h3><p>A feral ten year old orphan dressed in black and her toy robot companion. Chaotic, fearless, and fiercely loyal.</p></div>
+        </article>
+        <article class="character-card reveal">
+          <div class="character-image"><img src="assets/char-sisters.jpg" alt="The Sisters character art"></div>
+          <div class="character-body"><span class="character-type">The Dead</span><h3>The Sisters</h3><p>Vesna's murdered sisters, whose dolls return as manifestations of the dead. Their strange power becomes the weapon behind her revenge.</p></div>
+        </article>
+        <article class="character-card reveal">
+          <div class="character-image"><img src="assets/char-chief.jpg" alt="Chief and demonic figure artwork"></div>
+          <div class="character-body"><span class="character-type">The Tyrant</span><h3>Chief</h3><p>A polished political predator who controls the city with a smile, a threat, and blood on his hands.</p></div>
+        </article>
+        <article class="character-card reveal">
+          <div class="character-image"><img src="assets/char-lucian.jpg" alt="Lucian the warlock"></div>
+          <div class="character-body"><span class="character-type">The Warlock</span><h3>Lucian</h3><p>Soft spoken and terrifyingly informed. He understands what Vesna's power could become and why others want it destroyed.</p></div>
+        </article>
+        <article class="character-card reveal">
+          <div class="character-image"><img src="assets/char-dark-forces.jpg" alt="Dark forces artwork"></div>
+          <div class="character-body"><span class="character-type">The Unseen</span><h3>The Dark Forces</h3><p>Goetic demons, ritual magic, and forces from beyond the human world begin circling Vesna as her power grows.</p></div>
+        </article>
       </div>
     </section>
 
-    <section class="section">
-      <div class="buttons">
-        <!-- Replace # with your actual buy links -->
-        <a class="button" href="#" target="_blank" rel="noopener">Buy Kindle</a>
-        <a class="button" href="#" target="_blank" rel="noopener">Buy Paperback</a>
-        <a class="button" href="#" target="_blank" rel="noopener">Signed Copy</a>
+    <section id="motion" class="motion section-frame dark-section">
+      <div class="section-heading reveal">
+        <div class="section-kicker">Motion Monday</div>
+        <h2>The Book in Motion</h2>
+        <p>Animated moments from the world of VESNA.</p>
       </div>
-
-      <div class="footer">© Inspired Revolution</div>
+      <div class="motion-grid">
+        <article class="motion-card reveal">
+          <div class="motion-media"><video autoplay muted loop playsinline preload="metadata" aria-label="VESNA Motion Monday carnival animation"><source src="assets/motion-01.mp4" type="video/mp4"></video></div>
+        </article>
+        <article class="motion-card reveal">
+          <div class="motion-media"><video autoplay muted loop playsinline preload="metadata" aria-label="VESNA Motion Monday animation"><source src="assets/motion-02.mp4" type="video/mp4"></video></div>
+        </article>
+        <article class="motion-card reveal">
+          <div class="motion-media"><video autoplay muted loop playsinline preload="metadata" aria-label="VESNA Motion Monday dark creature animation"><source src="assets/motion-03.mp4" type="video/mp4"></video></div>
+        </article>
+      </div>
     </section>
 
+    <section id="gallery" class="gallery section-frame">
+      <div class="section-heading reveal">
+        <div class="section-kicker">Inside the Book</div>
+        <h2>Gallery</h2>
+      </div>
+      <div class="gallery-grid">
+        <button class="gallery-item tall reveal" data-full="assets/p06_img02.jpeg"><img src="assets/p06_img02.jpeg" alt="VESNA sample page"></button>
+        <button class="gallery-item tall reveal" data-full="assets/p06_img04.jpeg"><img src="assets/p06_img04.jpeg" alt="VESNA sample page"></button>
+        <button class="gallery-item tall reveal" data-full="assets/p06_img03.jpeg"><img src="assets/p06_img03.jpeg" alt="VESNA sample page"></button>
+      </div>
+    </section>
+
+    <section class="lore section-frame dark-section">
+      <div class="lore-grid">
+        <div class="lore-art reveal"><img src="assets/p07_img02.jpeg" alt="Close up portrait of Vesna"></div>
+        <div class="lore-copy reveal">
+          <div class="section-kicker">Beyond Stumble & Fall</div>
+          <h2>The mythology goes deeper.</h2>
+          <p><em>Stumble & Fall</em> is the first chapter of a larger story. As Vesna's power slips from her grasp, questions about her past and what she really is become impossible to ignore.</p>
+          <p>Book Two, <strong>The Exterminating Angel</strong>, expands the conflict into forgotten lives, rival factions, the underworld, and a war over whether Vesna can remain human.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="creators" class="creators section-frame">
+      <div class="section-heading reveal"><div class="section-kicker">Creators</div><h2>Behind VESNA</h2></div>
+      <div class="creator-grid">
+        <article class="creator-card reveal">
+          <img src="assets/jason-alacrity.jpg" alt="Jason Alacrity portrait">
+          <div><span>Writer / Creator</span><h3>Jason Alacrity</h3><p>Los Angeles based creative director, electronic musician, and music video director whose work includes Skinny Puppy, Frontline Assembly, Combichrist, and motion comics for <em>Alita: Battle Angel</em>.</p></div>
+        </article>
+        <article class="creator-card reveal">
+          <img src="assets/p09_img02.jpeg" alt="Megan Hutchison portrait illustration">
+          <div><span>Artist</span><h3>Megan Hutchison</h3><p>Austin based illustrator and writer whose published work includes Archaia, Image, Vault, BOOM!, DC, and Archie.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="buy" class="buy section-frame dark-section">
+      <div class="buy-inner reveal">
+        <div class="buy-art"><img src="assets/p03_img02.jpeg" alt="VESNA cover"></div>
+        <div class="buy-copy">
+          <div class="section-kicker">VESNA: Stumble & Fall</div>
+          <h2>Cross the veil.</h2>
+          <p>Available in digital and print editions, with signed limited edition copies available through the official VESNA shop.</p>
+          <div class="buy-actions">
+            <a href="#" class="button primary disabled" aria-disabled="true">Kindle Coming Soon</a>
+            <a href="https://vesnacomic.bigcartel.com" class="button ghost" target="_blank" rel="noopener">Visit the Shop</a>
+          </div>
+          <a class="social-link" href="https://www.instagram.com/vesna_comic/" target="_blank" rel="noopener">Follow @vesna_comic ↗</a>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div><strong>VESNA: Stumble & Fall</strong><span>© 2026 Inspired Revolution</span></div>
+    <div class="footer-links"><a href="#top">Back to top</a><a href="mailto:jasonalacrity@gmail.com">Contact</a></div>
+  </footer>
+
+  <dialog class="lightbox" id="lightbox">
+    <button class="lightbox-close" aria-label="Close">×</button>
+    <img src="" alt="Expanded gallery image">
+  </dialog>
+
+  <dialog class="video-modal" id="videoModal">
+    <button class="lightbox-close" aria-label="Close">×</button>
+    <div class="video-frame"><iframe src="" title="VESNA trailer" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
+  </dialog>
+
+  <script src="script.js"></script>
 </body>
 </html>
